@@ -37,20 +37,6 @@ i {
     transform: translateY(-8px) scale(1.1);
   }
 }
-.header-button {
-  border: 1px solid #fff;
-  padding: 8px 24px;
-  border-radius: 4px;
-  color: #fff;
-  background-color: transparent;
-  transition: background-color 0.9s;
-}
-
-.header-button:hover {
-  background-color: #367cbd;
-  border: #367cbd;
-}
-
 .header-logo {
   display: flex;
   align-items: center;
@@ -71,18 +57,31 @@ i {
     margin-top: 10px;
     font-size: 34px;
   }
-.header-logo {
-        font-size: 50px;
-        margin-top: 15px;
-        img {
-        width: 160x;
-        margin-top: 20px;
-        }
-      }
-  .header-button {
-    display: none;
+  .header-logo {
+    font-size: 50px;
+    margin-top: 15px;
+  }
+  .header-logo img {
+    width: 100px;
+    margin-top: 20px;
   }
 }
+.nav-list ul {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+}
+
+.nav-item a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-item a:hover {
+  color: #367cbd;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -130,16 +129,17 @@ i {
 }
 
 .button-contact {
-  padding: 15px 30px;
+  border: 1px solid #fff;
+  padding: 8px 24px;
+  border-radius: 4px;
   color: #fff;
-  background-color: #1c568b;
-  border: 0;
-  font-size: 18px;
-  font-weight: 600;
-  margin: 15px 0;
+  background-color: transparent;
+  transition: background-color 0.9s;
 }
 
 .button-contact:hover {
+  background-color: #367cbd;
+  border: #367cbd;
   animation: scaleButton 0.8s alternate infinite;
 }
 
