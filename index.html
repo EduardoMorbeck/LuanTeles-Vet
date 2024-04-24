@@ -10,10 +10,10 @@
     <title>Luan Teles | Veterinário</title>
 </head>
 <body>
-    <div class="bg-home">
-        <header>
+    <div class="bg-home" style="::before { background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url('Imagens/cat-8620369_1280.png');}">
+        <header id="home">
             <nav class="header-content container">
-                <div class="header-icons" data-aos="fade-down" data-aos-delay="200">
+                <div class="header-icons" data-aos="fade-down" data-aos-delay="100">
                     <a href="https://www.instagram.com/luantel.vet/"
                     target="_blank">
                         <i class="fa-brands fa-instagram fa-2x"></i>
@@ -27,19 +27,28 @@
                         <i class="fa-brands fa-linkedin fa-2x"></i>
                     </a>
                 </div>
-                <div class="header-logo" data-aos="fade-up" data-aos-delay="350">LT
-                    <im src="Imagens/logo.png"
+                <div class="header-logo" data-aos="fade-up" data-aos-delay="250">LT
+                    <im src=""
                     data-aos="flip-up"data-aos-delay="300" data-aos-duration="1000" alt="Logo do Veterinário">
                 </div>
-                <div data-aos="fade-down" data-aos-delay="450">
-                    <a class="header-button" href="https://api.whatsapp.com/send?phone5554991535050&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta"
-                    target="_blank">Agendamento</a>
+                <div class="nav-list" data-aos="fade-down" data-aos-delay="350">
+                <ul>
+                    <li class="nav-item">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#serviços">Serviços</a>
+                    </li>
+                </ul>
                 </div>
             </nav>
-            <main class="hero container" data-aos="fade-up" data-aos-delay="350" data-aos-duration="900">
+            <main class="hero container" data-aos="fade-up" data-aos-delay="350" data-aos-duration="1000">
                 <h1>Todo cuidado e atenção que seu pet merece</h1>
                 <p>Horário de atendimento: 9:00 às 20:00</p>
-                <a href="https://api.whatsapp.com/send?phone5554991535050&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta" class="button-contact" target="_blank ">
+                <a href="https://api.whatsapp.com/send?phone=5554991535050&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta" class="button-contact" target="_blank ">
                     Agendar consulta
                 </a>
             </main>
@@ -47,20 +56,20 @@
         </header>
     </div>
 
-    <section class="about">
+    <section class="about" id="sobre">
         <div class="container about-content">
             <div data-aos="zoom-in" data-aos-delay="250">
                 <img src="#" alt="Imagem sobre o Veterinário">
             </div>
             <div class="about-description"
-            data-aos="zoom-out" data-aos-delay="250">
+            data-aos="zoom-out" data-aos-delay="350">
                 <h2>Sobre</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, ipsum. Architecto odio voluptatem quia quae aut cumque! Explicabo provident quisquam reiciendis tempore? Ratione iusto excepturi blanditiis nihil alias esse accusamus?</p>
             </div>
         </div>
     </section>
 
-    <section class="services">
+    <section class="services" id="serviços">
         <div class="services-content container" class="header-icons" data-aos="fade-right" data-aos-delay="300">
             <h2>Serviços</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores earum placeat temporibus necessitatibus tenetur iure labore. Atque quasi obcaecati, neque illo eligendi suscipit ipsam vel assumenda reiciendis eius debitis id.</p>
