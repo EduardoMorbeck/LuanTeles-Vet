@@ -44,15 +44,16 @@
     }
 }
 .button-contact{
-    padding: 15px 30px;
+    border: 1px solid $branco-normal;
+    padding: 8px 24px;
+    border-radius: 4px;
     color: $branco-normal;
-    background-color: $azul-normal;
-    border: 0;
-    font-size: 18px;
-    font-weight: 600;
-    margin: 15px 0;
+    background-color: transparent;
+    transition: background-color 0.9s;
 }
 .button-contact:hover{
+    background-color: $azul-claro;
+    border: $azul-claro;
     animation: scaleButton 0.8s alternate infinite;
 }
 @keyframes scaleButton {
