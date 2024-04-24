@@ -47,7 +47,7 @@ i{
     font-family: 'Times New Roman', Times, serif;
     color: $branco-normal;
 }
-@media screen and (max-with: 768px){
+@media screen and (max-width: 768px){
     .header-content{
         width: 100%;
         flex-direction: column;
@@ -60,12 +60,13 @@ i{
 
     }
     .header-logo {
-        font-size: 20px;
-        img{
+        font-size: 50px;
+        margin-top: 15px;
+        img {
         width: 160x;
         margin-top: 20px;
         }
-    }
+}
     .header-button{
         display: none;
     }
