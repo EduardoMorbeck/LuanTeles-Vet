@@ -60,7 +60,7 @@ i {
   color: #fff;
 }
 
-@media screen and (max-with: 768px) {
+@media screen and (max-width: 768px) {
   .header-content {
     width: 100%;
     flex-direction: column;
@@ -71,13 +71,14 @@ i {
     margin-top: 10px;
     font-size: 34px;
   }
-  .header-logo {
-    font-size: 20px;
-    img {
-    width: 160x;
-    margin-top: 20px;
-    }
-  }
+.header-logo {
+        font-size: 50px;
+        margin-top: 15px;
+        img {
+        width: 160x;
+        margin-top: 20px;
+        }
+      }
   .header-button {
     display: none;
   }
