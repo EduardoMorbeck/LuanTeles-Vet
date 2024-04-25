@@ -36,6 +36,11 @@ i{
     font-family: 'Times New Roman', Times, serif;
     color: $branco-normal;
 }
+.header-logo img{
+    width: 80%;
+    height: 80%;
+    
+}
 
 @media screen and (max-width: 768px){
     .header-content{
@@ -53,8 +58,9 @@ i{
         font-size: 50px;
         margin-top: 15px;
         img {
-        width: 100px;
+        width: 300px;
         margin-top: 20px;
+        margin-bottom: 20px;
         }
       }
 
