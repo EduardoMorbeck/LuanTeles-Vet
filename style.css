@@ -5,8 +5,8 @@
   outline: 0;
 }
 
-header {
-  width: 100%;
+h1 {
+  font-weight: 400;
 }
 
 .header-content {
@@ -21,7 +21,9 @@ i {
 
 .header-icons {
   display: flex;
-  gap: 14px;
+  gap: 20px;
+  font-size: 22px;
+  padding: 50px 0 50px 0;
 }
 
 .header-icons a:hover i {
@@ -41,14 +43,30 @@ i {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 58px;
-  font-family: "Times New Roman", Times, serif;
-  color: #fff;
 }
 
 .header-logo img {
   width: 80%;
   height: 80%;
+}
+
+.nav-list ul {
+  display: flex;
+  flex-direction: column;
+  list-style: circle;
+  gap: 10px;
+  font-size: 25px;
+  padding-top: 50px;
+}
+
+.nav-item a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.nav-item a:hover {
+  color: #367cbd;
 }
 
 @media screen and (max-width: 768px) {
@@ -64,30 +82,20 @@ i {
   }
   .header-logo {
     font-size: 50px;
-    margin-top: 15px;
   }
   .header-logo img {
     width: 300px;
-    margin-top: 20px;
     margin-bottom: 20px;
   }
+  .nav-list ul {
+    display: flex;
+    text-align: center;
+  }
+  .nav-item a {
+    font-size: 25px;
+    padding: 4px 50px;
+  }
 }
-.nav-list ul {
-  display: flex;
-  list-style: none;
-  gap: 8px;
-}
-
-.nav-item a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.nav-item a:hover {
-  color: #367cbd;
-}
-
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -121,9 +129,10 @@ i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 15px 0 100px 0;
 }
 .hero h1 {
+  padding-top: 100px;
   text-align: center;
   line-height: 150%;
   max-width: 940px;
@@ -164,7 +173,7 @@ i {
   }
   .hero h1 {
     font-size: 34px;
-    padding: 0 14px;
+    padding: 100px 0 14px;
     width: 100%;
   }
   .hero p {
@@ -184,6 +193,7 @@ i {
 
 .about-content {
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
   gap: 15px;
@@ -212,13 +222,36 @@ i {
   }
 }
 .services {
-  background-color: #fff;
+  background-color: #edeaef;
   color: #232224;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 55px 15px;
+  padding: 55px 25px;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 0 45px 45px 45px;
+}
+
+.slider-principal div {
+  margin: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 10px 11px 17px -4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.slider-principal div img {
+  width: 100%;
+  max-width: 554px;
 }
 
 .services-content h2 {
@@ -232,6 +265,7 @@ i {
   margin-bottom: 15px;
   text-align: center;
   max-width: 768px;
+  font-style: italic;
 }
 
 .atendimentos {
@@ -257,6 +291,10 @@ i {
   max-width: 354px;
   transition: transform 1s;
 }
+.atendimento i {
+  color: #06121e;
+  padding: 2.5px;
+}
 
 .atendimento img:hover {
   transform: scale(1.1);
@@ -264,16 +302,17 @@ i {
 }
 
 .atendimento-info {
+  align-items: center;
+  text-align: center;
   width: 100%;
   display: flex;
-  padding: 15px;
+  padding: 9px;
   background-color: #fff;
-  z-index: 99;
-  text-align: center;
-  align-items: center;
+  z-index: 3;
+  justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 885px) {
   .atendimentos {
     flex-direction: column;
   }
@@ -284,6 +323,12 @@ i {
   .atendimento img {
     zoom: 0.9;
   }
+  .atendimento i {
+    font-size: 20px;
+  }
+  .atendimento-info strong {
+    padding-top: 10px;
+  }
 }
 .footer {
   display: flex;
@@ -293,6 +338,7 @@ i {
   padding: 55px 0;
   gap: 25px;
   color: #fff;
+  font-size: 20px;
 }
 
 .footer-logo {
@@ -307,7 +353,12 @@ i {
 
 .footer-icons {
   display: flex;
-  gap: 8px;
+  gap: 24px;
+  font-size: 24px;
+}
+
+.footer-icons i:hover {
+  color: #367cbd;
 }
 
 .button-whatsapp {
@@ -353,8 +404,13 @@ i {
     max-width: 64px;
   }
 }
+header {
+  width: 100%;
+}
+
 body {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "poppins", sans-serif;
+  font-weight: 200;
   color: rgb(241, 237, 231);
   width: 100%;
   height: 100vh;
