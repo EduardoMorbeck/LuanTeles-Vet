@@ -1,5 +1,5 @@
-header{
-    width: 100%;
+h1{
+    font-weight: 400;
 }
 .header-content{
     display: flex;
@@ -11,7 +11,9 @@ i{
 }
 .header-icons{
     display: flex;
-    gap: 14px;
+    gap: 20px;
+    font-size: 22px;
+    padding: 50px 0 50px 0;
 }
 .header-icons a:hover{
     i{
@@ -32,14 +34,29 @@ i{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 58px;
-    font-family: 'Times New Roman', Times, serif;
-    color: $branco-normal;
 }
 .header-logo img{
     width: 80%;
     height: 80%;
     
+}
+
+.nav-list ul{
+    display: flex;
+    flex-direction: column;
+    list-style: circle;
+    gap: 10px;
+    font-size:25px;
+    padding-top: 50px;
+}
+.nav-item a{
+    color: $branco-normal;
+    text-decoration: none;
+    font-weight: 300;  
+}
+
+.nav-item a:hover{
+    color: $azul-claro;
 }
 
 @media screen and (max-width: 768px){
@@ -56,27 +73,17 @@ i{
     }
     .header-logo {
         font-size: 50px;
-        margin-top: 15px;
         img {
         width: 300px;
-        margin-top: 20px;
         margin-bottom: 20px;
         }
       }
-
-}
-.nav-list ul{
-    display: flex;
-    list-style: none;
-    gap: 8px;
-
-}
-.nav-item a{
-    color: $branco-normal;
-    text-decoration: none;
-    font-weight: 600;  
-}
-
-.nav-item a:hover{
-    color: $azul-claro;
+      .nav-list ul{
+        display: flex;
+        text-align: center;
+      }
+      .nav-item a{
+        font-size:25px;
+        padding: 4px 50px;
+    }
 }
