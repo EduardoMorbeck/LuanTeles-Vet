@@ -189,6 +189,7 @@ i {
   background-color: #06121e;
   overflow: hidden;
   color: #fff;
+  padding: 100px 0 100px 0;
 }
 
 .about-content {
@@ -198,6 +199,7 @@ i {
   justify-content: center;
   gap: 15px;
   padding: 35px 15px 65px 15px;
+  font-size: 17px;
 }
 .about-content img {
   max-width: 570px;
@@ -361,6 +363,22 @@ i {
   color: #367cbd;
 }
 
+.button-whatsapp-home {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 99;
+}
+.button-whatsapp-home i {
+  max-width: 74px;
+  font-size: 55px;
+  transition: transform 0.4s;
+  color: #11395f;
+}
+.button-whatsapp-home i:hover {
+  transform: scale(1.1);
+}
+
 .button-whatsapp {
   position: fixed;
   bottom: 15px;
@@ -419,7 +437,7 @@ body {
 }
 
 button {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "poppins", sans-serif;
   cursor: pointer;
 }
 
@@ -431,6 +449,10 @@ img {
   width: 100%;
 }
 
+a {
+  cursor: pointer;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
 a {
   cursor: pointer;
   text-decoration: none;
