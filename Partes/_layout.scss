@@ -90,6 +90,7 @@
     background-color: $primaria-normal;
     overflow: hidden;
     color: $branco-normal;
+    padding: 100px 0 100px 0;
 }
 
 .about-content{
@@ -99,6 +100,7 @@
     justify-content: center;
     gap: 15px;
     padding: 35px 15px 65px 15px;
+    font-size: 17px;
 
     img{
         max-width: 570px;
@@ -268,7 +270,23 @@
     color: $azul-claro;
 }
 
+.button-whatsapp-home{
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    z-index: 99;
 
+    i{
+        max-width: 74px;
+        font-size: 55px;
+        transition: transform 0.4s;
+        color: $azul-escuro; 
+    }
+
+    i:hover{
+        transform: scale(1.1);
+    }
+}
 .button-whatsapp{
     position: fixed;
     bottom: 15px;
@@ -284,6 +302,7 @@
         transform: scale(1.1);
     }
 }
+
 .button-whatsapp .span{
     visibility: hidden;
     position: absolute;
@@ -298,10 +317,12 @@
     opacity: 0;
     transition: opacity 1s;
 }
+
 .button-whatsapp:hover .span{
     visibility: visible;
     opacity: 1;
 }
+
 @media screen and (max-width: 768px){
     .footer-logo img{
         width: 300px;
