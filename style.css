@@ -202,7 +202,7 @@ i {
   font-size: 17px;
 }
 .about-content img {
-  max-width: 570px;
+  max-width: 450px;
 }
 
 .about-content div {
@@ -221,6 +221,9 @@ i {
 @media screen and (max-width: 768px) {
   .about-content {
     flex-direction: column;
+  }
+  .about-content img {
+    max-width: 350px;
   }
 }
 .services {
@@ -341,9 +344,9 @@ i {
   gap: 25px;
   color: #fff;
   font-size: 20px;
-  p{
-        text-align: center;
-    }
+}
+.footer p {
+  text-align: center;
 }
 
 .footer-logo {
@@ -452,10 +455,6 @@ img {
   width: 100%;
 }
 
-a {
-  cursor: pointer;
-  text-decoration: none;
-}/*# sourceMappingURL=style.css.map */
 a {
   cursor: pointer;
   text-decoration: none;
