@@ -103,7 +103,7 @@
     font-size: 17px;
 
     img{
-        max-width: 570px;
+        max-width: 450px;
     }
 }
 
@@ -123,6 +123,9 @@
 @media screen and (max-width: 768px){
     .about-content{
         flex-direction: column;
+        img{
+            max-width: 350px;
+        }
     }
 }
 
@@ -250,6 +253,7 @@
     gap: 25px;
     color: $branco-normal;
     font-size: 20px;
+
     p{
         text-align: center;
     }
