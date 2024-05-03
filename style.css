@@ -236,12 +236,29 @@ i {
   padding: 55px 25px;
 }
 
+.services {
+  background-image: url("/Imagens/fundo3.jpeg");
+  background-position: 50% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slider {
+  background-image: url("/Imagens/fundo.jpg");
+  background-position: 50% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .slider {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
   padding: 0 45px 45px 45px;
+}
+.slider h2 {
+  font-size: 35px;
 }
 
 .slider-principal div {
@@ -318,6 +335,18 @@ i {
 }
 
 @media screen and (max-width: 885px) {
+  .services {
+    background-image: url("/Imagens/fundo2.jpg");
+    background-position: 50% 0%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .slider {
+    background-image: url("/Imagens/fundo.jpg");
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   .atendimentos {
     flex-direction: column;
   }
@@ -338,6 +367,7 @@ i {
 .footer {
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
   justify-content: center;
   padding: 55px 0;
