@@ -130,8 +130,8 @@
 }
 
 .services{
-    background-color: $branco-escuro;
-    color: $preto-normal;
+    color: $branco-normal;
+    font-weight: 350;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -139,19 +139,21 @@
     padding: 55px 25px;
 }
 .services{
-    background-image: url("/Imagens/fundo3.jpeg");
+    background-image: linear-gradient(to top, rgba(246, 248, 246, 0.1), #06121e), linear-gradient(to bottom, #f4f6f800, #ffffff), url("/Imagens/fundo3.jpeg");
     background-position: 50% 0%;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .slider{
-    background-image: url("/Imagens/fundo.jpg");
+    background-image: linear-gradient(to bottom, rgba(36, 39, 36, 0.041), #06121efb), linear-gradient(to top, rgba(234, 240, 234, 0), #ffffff),url("/Imagens/fundo.jpg");
     background-position: 50% 0;
     background-size: cover;
     background-repeat: no-repeat;
 }
 .slider{
+    color: $preto-normal;
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
     gap: 15px;
@@ -224,6 +226,7 @@
     z-index: 1;
 }
 .atendimento-info{
+    color: $preto-normal;
     align-items: center;
     text-align: center;
     width: 100%;
@@ -235,13 +238,13 @@
 }
 @media screen and (max-width: 885px){
     .services{
-        background-image: url("/Imagens/fundo2.jpg");
+        background-image: linear-gradient(to top, rgba(235, 243, 235, 0), #06121e), linear-gradient(to bottom, #f4f6f800, #e4e4e7), url("/Imagens/fundo2.jpg");
         background-position: 50% 0%;
         background-size: cover;
         background-repeat: no-repeat;
     }
     .slider{
-        background-image: url("/Imagens/fundo.jpg");
+        background-image: linear-gradient(to bottom, rgba(36, 39, 36, 0.1), #06121e), linear-gradient(to top, rgba(234, 240, 234, 0), #fcfdfd),url("/Imagens/fundo.jpg");
         background-position: 50% 0;
         background-size: cover;
         background-repeat: no-repeat;
