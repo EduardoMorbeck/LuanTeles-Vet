@@ -237,7 +237,7 @@ i {
 }
 
 .services {
-  background-image: linear-gradient(to top, rgba(246, 248, 246, 0.1), #06121e), linear-gradient(to bottom, rgba(244, 246, 248, 0), #ffffff), url("/Imagens/fundo3.jpeg");
+  background-image: linear-gradient(to top, rgba(246, 248, 246, 0.1), #06121e), linear-gradient(to bottom, rgba(244, 246, 248, 0), #f7f7f7), url("/Imagens/fundo3.jpeg");
   background-position: 50% 0%;
   background-size: cover;
   background-repeat: no-repeat;
