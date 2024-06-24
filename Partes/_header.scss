@@ -44,7 +44,7 @@ i{
 .nav-list ul{
     display: flex;
     flex-direction: column;
-    list-style: circle;
+    list-style: none;
     gap: 10px;
     font-size:25px;
     padding-top: 50px;
@@ -59,7 +59,7 @@ i{
     color: $azul-claro;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1010px){
     .header-content{
         width: 100%;
         flex-direction: column;
