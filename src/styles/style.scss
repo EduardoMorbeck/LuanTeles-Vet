@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+@import "./Partes/cores";
+@import "./Partes/header";
+@import "./Partes/layout";
+
+// Estilos do header estão em _header.scss
+
+body {
+  font-family: "poppins", sans-serif;
+  font-weight: 200;
+  color: rgb(241, 237, 231);
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: $primaria-normal;
+}
+button {
+  font-family: "poppins", sans-serif;
+  cursor: pointer;
+}
+svg {
+  width: 100%;
+}
+img {
+  width: 100%;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+

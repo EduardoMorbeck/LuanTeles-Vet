@@ -1,0 +1,230 @@
+---
+// Componente Header
+---
+
+<header id="home" class="main-header">
+  <nav class="header-content container">
+    <div class="header-logo">
+      <a href="#home" aria-label="Ir para o início">
+        <img src="/Imagens/logo.png" alt="Logo do Veterinário Luan Teles" />
+      </a>
+    </div>
+
+    <div class="nav-list" id="nav-list">
+      <ul>
+        <li class="nav-item">
+          <a href="#home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#sobre" class="nav-link">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a href="#serviços" class="nav-link">Serviços</a>
+        </li>
+        <li class="nav-item">
+          <a href="#avaliações" class="nav-link">Avaliações</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="header-icons">
+      <a
+        href="https://www.instagram.com/luantel.vet/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Siga-nos no Instagram"
+        class="social-icon instagram-icon"
+      >
+        <i class="fa-brands fa-instagram"></i>
+        <span class="social-tooltip">Instagram</span>
+      </a>
+      <a
+        href="https://www.facebook.com/luan.teles.71"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Siga-nos no Facebook"
+        class="social-icon facebook-icon"
+      >
+        <i class="fa-brands fa-facebook"></i>
+        <span class="social-tooltip">Facebook</span>
+      </a>
+      <a
+        href="https://api.whatsapp.com/send?phone=5554991535050&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Entre em contato via WhatsApp"
+        class="social-icon whatsapp-icon"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="social-tooltip">WhatsApp</span>
+      </a>
+    </div>
+
+    <div class="mobile-menu-wrapper">
+      <button
+        class="mobile-menu-toggle"
+        id="mobile-menu-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Menu mobile toggle
+  const mobileMenuToggle = document.getElementById(
+    "mobile-menu-toggle"
+  ) as HTMLButtonElement | null;
+  const navList = document.getElementById("nav-list") as HTMLElement | null;
+  const navLinks = document.querySelectorAll(
+    ".nav-link"
+  ) as NodeListOf<HTMLAnchorElement>;
+
+  if (mobileMenuToggle && navList) {
+    mobileMenuToggle.addEventListener("click", () => {
+      const isExpanded =
+        mobileMenuToggle.getAttribute("aria-expanded") === "true";
+      mobileMenuToggle.setAttribute("aria-expanded", String(!isExpanded));
+      navList.classList.toggle("active");
+      mobileMenuToggle.classList.toggle("active");
+    });
+  }
+
+  // Fechar menu ao clicar em um link
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (navList) {
+        navList.classList.remove("active");
+      }
+      if (mobileMenuToggle) {
+        mobileMenuToggle.classList.remove("active");
+        mobileMenuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+
+  // Header fixo ao fazer scroll
+  const header = document.querySelector(".main-header") as HTMLElement | null;
+  let lastScroll = 0;
+
+  if (header) {
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > 100) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+
+      lastScroll = currentScroll;
+    });
+  }
+
+  // Scroll suave para âncoras
+  document.querySelectorAll('a[href^="#"]').forEach((anchor: Element) => {
+    anchor.addEventListener("click", (e: Event) => {
+      e.preventDefault();
+      const href = (anchor as HTMLAnchorElement).getAttribute("href");
+      if (href) {
+        const target = document.querySelector(href) as HTMLElement | null;
+        if (target) {
+          const headerOffset = 100;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition =
+            elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
+      }
+    });
+  });
+
+  // Destacar link ativo baseado na seção visível
+  const sections = document.querySelectorAll(
+    "section[id], div[id], h2[id]"
+  ) as NodeListOf<HTMLElement>;
+
+  function highlightActiveSection() {
+    const scrollY = window.pageYOffset;
+    const headerOffset = 150; // Offset para considerar o header fixo
+
+    // Se estiver no topo da página, ativar o link "home"
+    if (scrollY < 200) {
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#home") {
+          link.classList.add("active");
+        }
+      });
+      return;
+    }
+
+    // Verificar se estamos abaixo da seção serviços
+    const servicosSection = document.querySelector(
+      "#serviços"
+    ) as HTMLElement | null;
+    if (servicosSection) {
+      const servicosBottom =
+        servicosSection.offsetTop + servicosSection.offsetHeight;
+      // Se o scroll estiver abaixo da seção serviços, ativar avaliações
+      if (scrollY > servicosBottom - headerOffset) {
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#avaliações") {
+            link.classList.add("active");
+          }
+        });
+        return;
+      }
+    }
+
+    // Verificar qual seção está visível
+    let currentSection = "";
+    sections.forEach((section: HTMLElement) => {
+      const sectionId = section.getAttribute("id");
+      if (!sectionId) return;
+
+      // Ignorar o header que também tem ID "home"
+      if (sectionId === "home" && section.tagName === "HEADER") return;
+
+      const rect = section.getBoundingClientRect();
+      const sectionTop = rect.top;
+      const sectionBottom = rect.bottom;
+
+      // Se a seção está visível na viewport (considerando o offset do header)
+      if (sectionTop <= headerOffset && sectionBottom > headerOffset) {
+        currentSection = sectionId;
+      }
+    });
+
+    // Atualizar os links do navbar
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (
+        currentSection &&
+        link.getAttribute("href") === `#${currentSection}`
+      ) {
+        link.classList.add("active");
+      }
+    });
+  }
+
+  // Chamar a função no carregamento para definir o estado inicial
+  highlightActiveSection();
+  window.addEventListener("scroll", highlightActiveSection);
+</script>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
